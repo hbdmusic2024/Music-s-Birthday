@@ -1,0 +1,242 @@
+/*Online Card*/
+
+@font-face {
+    font-family: 'Sueltaa';
+    src: url(../fonts/sueltaa-sueltaa.ttf);
+}
+
+:root {
+    --primary: #fff;
+    --bg-envelope-color: #f3f2f0;
+    --envelope-tab: #e3e3e3;
+    --envelope-cover: #dcdcdc;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --txt-color: black;
+    --heart-color: #9470CE;
+}
+
+.online-card {
+    margin: 70px;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(../images/background.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+}
+
+.container > .envelope-wrapper {
+    background: var(--bg-envelope-color);
+    box-shadow: 0 0 40px var(--shadow-color);
+    position: relative;
+    perspective: 1000px;
+    transition: transform 1s;
+}
+
+.envelope-wrapper > .envelope {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.envelope-wrapper > .envelope::before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    border-top: 190px solid var(--envelope-tab);
+    border-right: 200px solid transparent;
+    border-left: 200px solid transparent;
+    top: 0;
+    transform-origin: top;
+    transition: all 0.5s ease-in-out 0.7s;
+}
+
+.envelope-wrapper > .envelope::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    width: 0px;
+    height: 0px;
+    border-top: 190px solid transparent;
+    border-left: 200px solid var(--envelope-cover);
+    border-right: 200px solid var(--envelope-cover);
+    border-bottom: 110px solid var(--envelope-cover);
+    bottom: 0;
+}
+
+.letter {
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    width: 60%;
+    height: 80%;
+    background: var(--primary);
+    transition: all 1s ease-in-out;
+    padding: 20px 10px;
+    box-shadow: 0 0 10px var(--shadow-color);
+    transform-origin: bottom;
+    border-radius: 30px;
+}
+
+
+.letter > .text  {
+    font-family: 'Sueltaa';
+    font-size: 10px;
+    color: var(--txt-color);
+    text-align: center;
+    transition: font-size 2.8s ease-in-out;
+}
+
+.main-text {
+    margin-top: -30px;
+    padding-left: 45px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.flap > .envelope .letter .text {
+    font-family: 'Sueltaa';
+    font-size: 20px;
+    color: var(--txt-color);
+    text-align: center;
+}
+
+.open {
+    font-size: 30px;
+}
+
+
+.surprise {
+    font-size: 55px;
+    margin-top: -30px;
+}
+
+.hello-sticker {
+    text-align: center;
+    margin-bottom: -30px;
+}
+
+.hello-sticker img {
+    width: 50px;
+    height: 40px;
+}
+
+.sticker-buttons {
+    font-family: 'Sueltaa';
+    margin-top: -70px;
+    position: relative;
+    z-index: 0; 
+}
+
+.sticker-buttons ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.sticker-buttons ul li a {
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--txt-color);
+    position: relative;
+    display: block; 
+}
+
+.sticker-buttons ul li a svg {
+    width: 75px;
+    height: 75px;
+    display: inline-block;
+    z-index: 5; 
+}
+
+
+
+.heart {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background: var(--heart-color);
+    z-index: 4;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: transform 0.5s ease-in-out 1s;
+    box-shadow: 0 0 10px var(--shadow-color);
+    cursor: pointer;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: var(--heart-color);
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -15px;
+}
+
+.heart::after {
+    right: 15px;
+}
+
+.flap > .envelope::before {
+    z-index: 0;
+    transform: rotateX(180deg);
+}
+
+
+
+.flap > .envelope .letter {
+    bottom: 70px;
+    transform: scale(1.2) rotate(-10deg);
+    transition-delay: 1s;
+    height: 120%;
+}
+
+.flap > .heart {
+    transform: rotate(90deg);
+    transition-delay: 0.4s;
+}
+
+
+/*Whole website*/
+body {
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/*Header*/
+
+header {
+    background-image: url(../images/header-picture.png);
+    font-family: 'Poppins', sans-serif;
+    padding: 35px;
+}
+
+.date {
+    color: white;
+    float: right;
+    margin-right: -20px;
+}
+
+
+section {
+    background-image: url(../images/background-paper.png);
+}
+
+
+
