@@ -1,12 +1,16 @@
 /*Whole website*/
-body {
+html, body {
     margin: 0;
+    padding: 0;
     width: 100%;
+    height: 100%;
 }
 
 .hidden {
     display: none;
 }
+
+
 
 /*Header*/
 
@@ -96,5 +100,41 @@ section {
 
 .end img {
     width: 650px;
+}
+
+/*Footer*/
+
+footer {
+    background-image: url(../images/footer-img.png);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    margin-top: -15px;
+}
+
+.heart-footer-big {
+    position: absolute;
+    top: -70px;
+    left: 30%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.heart-footer-small {
+    transform: rotate(70deg);
+    margin-left: -40px;
+}
+
+
+.footer-text {
+    color: white;
+    font-size: 65px;
+    margin-top: -60px;
+}
+
+.footer-mini-text {
+    font-size: 12px;
+    color: white;
+    margin-top: -40px;
 }
 
