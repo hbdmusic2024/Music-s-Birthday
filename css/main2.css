@@ -25,6 +25,7 @@ header {
 /*Section1*/
 section {
     background-image: url(../images/background-paper.png);
+    overflow: hidden;
 }
 
 #section1 {
