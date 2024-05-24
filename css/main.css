@@ -210,33 +210,7 @@
 }
 
 
-/*Whole website*/
-body {
-    margin: 0;
-}
 
-.hidden {
-    display: none;
-}
-
-/*Header*/
-
-header {
-    background-image: url(../images/header-picture.png);
-    font-family: 'Poppins', sans-serif;
-    padding: 35px;
-}
-
-.date {
-    color: white;
-    float: right;
-    margin-right: -20px;
-}
-
-
-section {
-    background-image: url(../images/background-paper.png);
-}
 
 
 
