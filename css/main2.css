@@ -26,15 +26,15 @@ header {
     margin-right: -20px;
 }
 
-/*Section1*/
 section {
     background-image: url(../images/background-paper.png);
     overflow: hidden;
-}
-
-#section1 {
     text-align: center;
 }
+
+/*Section1*/
+
+
 
 .journal-logo {
     position: relative;  
@@ -91,15 +91,155 @@ section {
     color: #353535;
 }
 
-.end {
+.journal-text-s1 {
     position: relative;
     margin-left: -105px;
     margin-top: 99px;
     z-index: 1;
 }
 
-.end img {
+.journal-text-s1 img {
     width: 650px;
+}
+
+
+/*Section3*/
+
+.scrolling-container{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    transform: rotate(-3deg);
+  }
+  
+  .scrolling-text-content{
+    display: inline-block;
+    animation: scroll 200s forwards linear infinite;
+  }
+  
+  .scrolling-text-content p{
+    font-size: 1.5em;
+    white-space: nowrap;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+  }
+  
+  @keyframes scroll {
+    0%{transform: translate(0, 0)}
+    100%{transform: translate(-100%, 0)}
+  }
+
+
+  .music-photo {
+    float: left;
+    position: absolute;
+    z-index: 5;
+}
+  .greetings-text-s3 {
+    position: relative;
+    margin-left: -80px;
+    z-index: 1;
+    margin-top: 150px;
+}
+
+.greetings-text-s3 img {
+    width: 550px;
+}
+
+.sticker-package {
+    position: relative;
+    z-index: 4;
+    float: right;
+    margin-top: -170px;
+    margin-right: -20px;
+}
+
+/*Section4*/
+#section4 {
+    position: relative;
+    text-align: center;
+}
+
+.pink-animal-s4 {
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+}
+
+.star-necklace {
+    position: absolute;
+    z-index: 2;
+    right: -110px;
+    overflow: hidden;
+    margin-top: -390px;
+}
+
+.moments-logo-s4 {
+    position: relative;
+    z-index: 4;
+    margin-top: 80px;
+}
+
+
+
+.photo-drag {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%; 
+    align-items: center;
+    justify-items: center;
+    margin-top: -290px;
+}
+
+.photo-drag img {
+    width: 100%; 
+    max-width: 70px;
+    height: auto; 
+}
+
+.drop-zone {
+    display: flex;
+    justify-content: center;
+}
+
+.moments-airpods-s4 {
+    margin-top: -220px;
+}
+
+/*Section5*/
+ #section5 {
+    text-align: center;
+    position: relative;
+ }
+
+ .memories-text-s5 {
+    margin-left: -50px;
+    margin-top: 0px;
+    z-index: 1;
+}
+
+.memories-text-s5 img {
+    width: 520px;
+}
+
+.memories-ticket-toronto {
+    position: absolute;
+    left: -15%;
+    top: 28%;
+}
+
+.memories-ticket-wf {
+    position: absolute;
+    right: -15%;
+    top: 15%;
+}
+
+.memories-hbd-s5 {
+    margin-bottom: 60px;
+    margin-top: 60px;
 }
 
 /*Footer*/
