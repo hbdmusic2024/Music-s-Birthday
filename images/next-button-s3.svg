@@ -1,0 +1,7 @@
+<svg id="next-button-s3" xmlns="http://www.w3.org/2000/svg" width="34.229" height="34.229" viewBox="0 0 34.229 34.229">
+  <rect id="Rectangle" width="34.229" height="34.229" rx="17.115" transform="translate(0 0)" fill="#353535"/>
+  <g id="Icon" transform="translate(11.247 10.773)">
+    <path id="Path" d="M0,0,9.191,6.663,0,13.327V0Z" fill="#efcf32"/>
+    <path id="Path-2" data-name="Path" d="M.621,0V11.661" transform="translate(12.246 0.833)" fill="none" stroke="#efcf32" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.6"/>
+  </g>
+</svg>
