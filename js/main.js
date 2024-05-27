@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
             e.preventDefault();
         });
 
-        hammer.on("panend", function() {
+        hammer.on("panend", function(e) {
             image.classList.remove("dragging");
             image.style.zIndex = "";
             e.preventDefault();
@@ -41,17 +41,23 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Prevent default touch actions
-    document.addEventListener('touchmove', function(e) {
-        e.preventDefault();
+    // Prevent default touch actions globally on the document
+    document.addEventListener('touchstart', function(e) {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+        }
     }, { passive: false });
 
-    document.addEventListener('touchstart', function(e) {
-        e.preventDefault();
+    document.addEventListener('touchmove', function(e) {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+        }
     }, { passive: false });
 
     document.addEventListener('touchend', function(e) {
-        e.preventDefault();
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+        }
     }, { passive: false });
 });
 
