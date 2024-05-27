@@ -8,7 +8,6 @@ function videoUrl(greetings){
 }
 
 // Audio Player
-
 document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll(".photo-drag img");
     images.forEach(image => {
@@ -16,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         hammer.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
         hammer.on("panstart", function(e) {
+            image.classList.add("dragging");
             image.style.position = "absolute";
             image.style.zIndex = 1000;
             document.body.append(image);
@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         hammer.on("panend", function() {
+            image.classList.remove("dragging");
             image.style.zIndex = "";
         });
 

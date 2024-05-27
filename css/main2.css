@@ -310,6 +310,9 @@ section {
     touch-action: none;
     -webkit-user-drag: none;
 }
+.photo-drag img.dragging {
+    opacity: 0.7;
+}
 
 
 
