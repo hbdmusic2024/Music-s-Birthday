@@ -306,15 +306,6 @@ section {
 /* MUSIC PLAYER */
     
 
-.photo-drag img {
-    touch-action: none;
-    -webkit-user-drag: none;
-    user-select: none;
-}
-.photo-drag img.dragging {
-    opacity: 0.7;
-}
-
 
 
 

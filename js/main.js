@@ -8,58 +8,7 @@ function videoUrl(greetings){
 }
 
 // Audio Player
-document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll(".photo-drag img");
-    
-    images.forEach(image => {
-        const hammer = new Hammer(image);
-        hammer.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
-        hammer.on("panstart", function(e) {
-            image.classList.add("dragging");
-            image.style.position = "absolute";
-            image.style.zIndex = 1000;
-            document.body.append(image);
-            moveAt(e.center.x, e.center.y);
-            e.preventDefault();
-        });
-
-        hammer.on("panmove", function(e) {
-            moveAt(e.center.x, e.center.y);
-            e.preventDefault();
-        });
-
-        hammer.on("panend", function(e) {
-            image.classList.remove("dragging");
-            image.style.zIndex = "";
-            e.preventDefault();
-        });
-
-        function moveAt(pageX, pageY) {
-            image.style.left = pageX - image.offsetWidth / 2 + 'px';
-            image.style.top = pageY - image.offsetHeight / 2 + 'px';
-        }
-    });
-
-    // Prevent default touch actions globally on the document
-    document.addEventListener('touchstart', function(e) {
-        if (e.target.tagName === 'IMG') {
-            e.preventDefault();
-        }
-    }, { passive: false });
-
-    document.addEventListener('touchmove', function(e) {
-        if (e.target.tagName === 'IMG') {
-            e.preventDefault();
-        }
-    }, { passive: false });
-
-    document.addEventListener('touchend', function(e) {
-        if (e.target.tagName === 'IMG') {
-            e.preventDefault();
-        }
-    }, { passive: false });
-});
 
 // document.addEventListener('DOMContentLoaded', function() {
 //     const navigationItems = document.querySelectorAll('.navigation li');
