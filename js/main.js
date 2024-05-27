@@ -11,43 +11,31 @@ function videoUrl(greetings){
 
 document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll(".photo-drag img");
-    let currentDrag = null;
-
     images.forEach(image => {
-        image.addEventListener("touchstart", touchStart, false);
-        image.addEventListener("touchmove", touchMove, false);
-        image.addEventListener("touchend", touchEnd, false);
+        const hammer = new Hammer(image);
+        hammer.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+
+        hammer.on("panstart", function(e) {
+            image.style.position = "absolute";
+            image.style.zIndex = 1000;
+            document.body.append(image);
+            moveAt(e.center.x, e.center.y);
+        });
+
+        hammer.on("panmove", function(e) {
+            moveAt(e.center.x, e.center.y);
+        });
+
+        hammer.on("panend", function() {
+            image.style.zIndex = "";
+        });
+
+        function moveAt(pageX, pageY) {
+            image.style.left = pageX - image.offsetWidth / 2 + 'px';
+            image.style.top = pageY - image.offsetHeight / 2 + 'px';
+        }
     });
-
-    function touchStart(e) {
-        currentDrag = e.target;
-        currentDrag.style.position = "absolute";
-        currentDrag.style.zIndex = 1000;
-        document.body.append(currentDrag);
-        moveAt(e.touches[0].pageX, e.touches[0].pageY);
-        e.preventDefault();
-    }
-
-    function moveAt(pageX, pageY) {
-        currentDrag.style.left = pageX - currentDrag.offsetWidth / 2 + 'px';
-        currentDrag.style.top = pageY - currentDrag.offsetHeight / 2 + 'px';
-    }
-
-    function touchMove(e) {
-        if (currentDrag) {
-            moveAt(e.touches[0].pageX, e.touches[0].pageY);
-        }
-        e.preventDefault();
-    }
-
-    function touchEnd(e) {
-        if (currentDrag) {
-            currentDrag = null;
-        }
-        e.preventDefault();
-    }
 });
-
 
 
 // document.addEventListener('DOMContentLoaded', function() {

@@ -308,7 +308,9 @@ section {
 
 .photo-drag img {
     touch-action: none;
+    -webkit-user-drag: none;
 }
+
 
 
 
