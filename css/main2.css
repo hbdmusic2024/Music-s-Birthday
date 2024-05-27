@@ -304,12 +304,36 @@ section {
 }
 
 /*Section5*/
+
+
+/* jass chnages */
+
+
+.memories-logo-s5{
+    z-index: 3;
+    position: relative;
+}
+
+.memories-video{
+    position: relative;
+    z-index: 0;
+}
+
+.memories-video img {
+    margin-top: -51px;
+    width: 100%;
+}
+
+
+/* jass chnages */
+
  #section5 {
     text-align: center;
     position: relative;
  }
 
  .memories-text-s5 {
+    position: relative;
     margin-left: -50px;
     margin-top: -60px;
     z-index: 1;
@@ -323,6 +347,7 @@ section {
     position: absolute;
     left: -15%;
     top: 50%;
+    z-index: 3;
 }
 
 .memories-ticket-wf {
