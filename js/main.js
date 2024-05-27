@@ -11,33 +11,40 @@ function videoUrl(greetings){
 
 document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll(".photo-drag img");
+    let currentDrag = null;
+
     images.forEach(image => {
         image.addEventListener("touchstart", touchStart, false);
         image.addEventListener("touchmove", touchMove, false);
         image.addEventListener("touchend", touchEnd, false);
     });
 
-    let touch = null;
-
     function touchStart(e) {
-        touch = e.target;
-        touch.style.position = "absolute";
-        touch.style.zIndex = 1000;
-        document.body.append(touch);
+        currentDrag = e.target;
+        currentDrag.style.position = "absolute";
+        currentDrag.style.zIndex = 1000;
+        document.body.append(currentDrag);
         moveAt(e.touches[0].pageX, e.touches[0].pageY);
+        e.preventDefault();
     }
 
     function moveAt(pageX, pageY) {
-        touch.style.left = pageX - touch.offsetWidth / 2 + 'px';
-        touch.style.top = pageY - touch.offsetHeight / 2 + 'px';
+        currentDrag.style.left = pageX - currentDrag.offsetWidth / 2 + 'px';
+        currentDrag.style.top = pageY - currentDrag.offsetHeight / 2 + 'px';
     }
 
     function touchMove(e) {
-        moveAt(e.touches[0].pageX, e.touches[0].pageY);
+        if (currentDrag) {
+            moveAt(e.touches[0].pageX, e.touches[0].pageY);
+        }
+        e.preventDefault();
     }
 
-    function touchEnd() {
-        touch = null;
+    function touchEnd(e) {
+        if (currentDrag) {
+            currentDrag = null;
+        }
+        e.preventDefault();
     }
 });
 
