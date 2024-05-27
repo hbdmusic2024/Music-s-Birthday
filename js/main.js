@@ -7,6 +7,42 @@ function videoUrl(greetings){
     document.getElementById("slider").src = greetings;
 }
 
+// Audio Player
+
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll(".photo-drag img");
+    images.forEach(image => {
+        image.addEventListener("touchstart", touchStart, false);
+        image.addEventListener("touchmove", touchMove, false);
+        image.addEventListener("touchend", touchEnd, false);
+    });
+
+    let touch = null;
+
+    function touchStart(e) {
+        touch = e.target;
+        touch.style.position = "absolute";
+        touch.style.zIndex = 1000;
+        document.body.append(touch);
+        moveAt(e.touches[0].pageX, e.touches[0].pageY);
+    }
+
+    function moveAt(pageX, pageY) {
+        touch.style.left = pageX - touch.offsetWidth / 2 + 'px';
+        touch.style.top = pageY - touch.offsetHeight / 2 + 'px';
+    }
+
+    function touchMove(e) {
+        moveAt(e.touches[0].pageX, e.touches[0].pageY);
+    }
+
+    function touchEnd() {
+        touch = null;
+    }
+});
+
+
+
 // document.addEventListener('DOMContentLoaded', function() {
 //     const navigationItems = document.querySelectorAll('.navigation li');
     
