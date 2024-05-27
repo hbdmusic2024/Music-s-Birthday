@@ -10,6 +10,7 @@ function videoUrl(greetings){
 // Audio Player
 document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll(".photo-drag img");
+    
     images.forEach(image => {
         const hammer = new Hammer(image);
         hammer.get('pan').set({ direction: Hammer.DIRECTION_ALL });
@@ -20,15 +21,18 @@ document.addEventListener("DOMContentLoaded", function() {
             image.style.zIndex = 1000;
             document.body.append(image);
             moveAt(e.center.x, e.center.y);
+            e.preventDefault();
         });
 
         hammer.on("panmove", function(e) {
             moveAt(e.center.x, e.center.y);
+            e.preventDefault();
         });
 
         hammer.on("panend", function() {
             image.classList.remove("dragging");
             image.style.zIndex = "";
+            e.preventDefault();
         });
 
         function moveAt(pageX, pageY) {
@@ -36,8 +40,20 @@ document.addEventListener("DOMContentLoaded", function() {
             image.style.top = pageY - image.offsetHeight / 2 + 'px';
         }
     });
-});
 
+    // Prevent default touch actions
+    document.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+    }, { passive: false });
+
+    document.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+    }, { passive: false });
+
+    document.addEventListener('touchend', function(e) {
+        e.preventDefault();
+    }, { passive: false });
+});
 
 // document.addEventListener('DOMContentLoaded', function() {
 //     const navigationItems = document.querySelectorAll('.navigation li');
