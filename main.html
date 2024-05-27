@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d0e8431583.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="css/main2.css" rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <title>Music's Birthday</title>
@@ -117,23 +119,67 @@
                   <div class="photozone"><img src="images/moments-photozone-s4.svg" alt="photozone"></div>
 
                   <div class="photo-drag">
-                    <img src="images/photo1-s4.png" alt="photo1" draggable="true">
-                    <img src="images/photo2-s4.png" alt="photo2" draggable="true">
-                    <img src="images/photo3-s4.png" alt="photo3" draggable="true">
-                    <img src="images/photo4-s4.png" alt="photo4" draggable="true">
-                    <img src="images/photo5-s4.png" alt="photo5" draggable="true">
-                    <img src="images/photo6-s4.png" alt="photo6" draggable="true">
+                    <img src="images/photo1-s4.png" alt="photo1" data-audio="audio/audio-photo1.mp3" draggable="true">
+
+                    <img src="images/photo2-s4.png" alt="photo2" data-audio="audio/audio-photo2.mp3"  draggable="true">
+
+                    <img src="images/photo3-s4.png" alt="photo3" data-audio="audio/audio-photo3.mp3"   draggable="true">
+
+                    <img src="images/photo4-s4.png" alt="photo4" data-audio="audio/audio-photo4.mp3"   draggable="true">
+
+                    <img src="images/photo5-s4.png" alt="photo5" data-audio="audio/audio-photo5.mp3"   draggable="true">
+                    
+                    <img src="images/photo6-s4.png" alt="photo6" data-audio="audio/audio-photo6.mp3"   draggable="true">
                   </div>
 
                   <div class="drop-zone">
+                    <!-- BG -->
                     <img src="images/moments-dropzone-s4.png">
 
-                    <div class="pop-up"></div>
+                    <!-- POP UP Zone -->
+                    <div class="pop">
+                      
+                    </div>
+
+                    <div class="audio-player">
+                      <audio id="audioPlayer" class="audio-element">
+                          <source src="" type="audio/mp3">
+                          Your browser does not support the audio element.
+                      </audio>
+                      <div class="controls">
+
+                        <button id="rewindBtn" class="rewind">
+                          <img src="images/Repeat.svg" alt="Rewind">
+                        </button>
+
+                          <button id="playPauseBtn" class="play-pause">
+                              <span id="playIcon">&#9658;</span>
+                              <span id="pauseIcon">&#10074;&#10074;</span>
+                          </button>
+                          <!-- <input type="range" id="seekBar" value="15" max="100" class="custom-seek-bar"> -->
+                          
+
+                          <!-- <div class="seekbar-container">
+                            <div id="seekBar" class="seekbar"></div>
+                        </div> -->
+                        
+                        <div id="visualizer" class="visualizer"></div>
 
 
-                    <!-- <audio id="audio1" src="audio/audio-photo1.mp3" data-trackref="audio1"></audio> -->
+                          <button id="volumeBtn" class="volume">
+                           <img src="images/volume.svg" alt="volume">
+                          </button>
+                      </div>
+                  </div>
+                    <!-- <audio controls id="audioPlayer" class="audio-player">
+                      <source src="" type="audio/mp3">
+                      Your browser does not support the audio element.
+                  </audio> -->
+
+
                   
                   </div>
+
 
                   <div class="moments-airpods-s4"><img src="images/moments-airpods-s4.svg"></div>                
             </section>
@@ -169,6 +215,7 @@
         </footer>
        
         <script src="js/main.js"></script> 
+        <script src="js/player.js"></script> 
        
 
     </body>
