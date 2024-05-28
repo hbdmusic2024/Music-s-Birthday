@@ -28,7 +28,7 @@
                 </div>
                 <div class="pen"><img src="images/pen-s1.svg" alt="pen"></div>
                 <div class="sticker-bear"><img src="images/sticker-bear-s1.svg" alt="bear"></div>
-                <div class="purple-line"><object data="images/line-purple-s1.svg" type="image/svg+xml"></object></div>
+                <div class="purple-line"><object data="images/line-purple-s1.svg" type="image/svg+xml"></object>    </div>
                 <div><img src="images/heart1-s1.svg" alt="heart1" class="heart-big-1">
                     <img src="images/heart2-s1.svg" alt="heart2" class="heart-big-2">
                 </div>
@@ -285,6 +285,9 @@
         <script src="js/player.js"></script> 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- videos slider only -->
+
 <script>
 const swiper = new Swiper('.swiper', {
     loop: false,
@@ -333,7 +336,63 @@ const swiper = new Swiper('.swiper', {
 
 </script>
         
-       
+
+<!-- video play  pause only in view -->
+       <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const playVideo = (video) => {
+        if (video.paused) {
+            video.play();
+            console.log(`Playing video: ${video.src}`);
+        }
+    };
+
+    const pauseVideo = (video) => {
+        if (!video.paused) {
+            video.pause();
+            video.currentTime = 0;
+            console.log(`Pausing video: ${video.src}`);
+        }
+    };
+
+    const handleIntersection = (entries, observer) => {
+        entries.forEach(entry => {
+            const video = entry.target.querySelector('video');
+            if (video) {
+                if (entry.isIntersecting) {
+                    playVideo(video);
+                } else {
+                    pauseVideo(video);
+                }
+            }
+        });
+    };
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5 // Adjust this value based on when you want the video to start playing
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, observerOptions);
+
+    // Selecting swiper videos
+    document.querySelectorAll('.swiper-slide').forEach(slide => {
+        const video = slide.querySelector('video');
+        if (video) {
+            video.pause(); // Ensure all videos are paused initially
+        }
+        observer.observe(slide);
+    });
+
+    // Selecting memories video
+    const memoriesVideo = document.getElementById('slider');
+    if (memoriesVideo) {
+        observer.observe(memoriesVideo.parentElement); // Observe the parent element of the video
+    }
+});
+
+       </script>
 
     </body>
 </html>
