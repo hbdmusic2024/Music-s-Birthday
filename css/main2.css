@@ -474,7 +474,7 @@ section {
 /* jass chnages */
 
 
-.memories-logo-s5{
+/* .memories-logo-s5{
     z-index: 3;
     position: relative;
 }
@@ -487,7 +487,7 @@ section {
 .memories-video img {
     margin-top: -51px;
     width: 100%;
-}
+} */
 
 
 /* jass chnages */
@@ -511,22 +511,21 @@ section {
 .memories-ticket-toronto {
     position: absolute;
     left: -15%;
-    top: 50%;
+    top: 40%;
     z-index: 3;
 }
 
 .memories-ticket-wf {
     position: absolute;
     right: -15%;
-    top: 15%;
+    top: 10%;
 }
 
-.memories-hbd-s5 {
-    margin-bottom: 60px;
-    margin-top: 60px;
+.memories-hbd-s5 img {
+    width: 100%;
 }
 
-.memories-video img {
+.memories-video video {
     width: 100%;
 }
 
