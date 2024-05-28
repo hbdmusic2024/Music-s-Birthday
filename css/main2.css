@@ -394,6 +394,17 @@ section {
 } */
 
 
+.song-names h2{
+    position: absolute;
+    margin-left: -35px;
+    white-space: nowrap;
+    top: 134px;
+    left: 222px;
+    z-index: 6;
+    color: #FFCC00;
+}
+
+
 
 .audio-player {
     display: flex;
@@ -482,15 +493,25 @@ section {
     padding: 10px; /* Optional: Add padding for spacing */
 }
 
-.bar {
-    width: 100%; /* Each bar takes full width of the container */
-    background-color: #FFCC00; /* Bar color */
-    border-radius: 4px  ; /* Rounded corners */
-    /* margin: 1px; */
+/* .bar {
+    width: 100%; 
+    background-color: #FFCC00; 
+    border-radius: 4px  ; 
    
-    margin-bottom: 5px; /* Adjust spacing between bars */
-}
+   
+    margin-bottom: 5px; 
+} */
 
+
+.bar {
+    width: 100%;
+    width: 3px !important; 
+    background-color: #FFCC00;
+    border-radius: 4px  ; 
+    margin: 1px;
+   
+    margin-bottom: 5px; 
+}
 
 /* --------------- */
 

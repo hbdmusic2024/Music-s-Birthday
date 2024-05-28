@@ -182,33 +182,42 @@
                   <div class="photozone"><img src="images/moments-photozone-s4.svg" alt="photozone"></div>
 
                   <div class="photo-drag">
-                    <img src="images/photo1-s4.png" alt="photo1" data-audio="audio/audio-photo1.mp3" draggable="true">
+                    <img src="images/photo1-s4.png" alt="photo1" data-audio="audio/audio-photo1.mp3" data-song-name="Paraluman" draggable="true">
 
-                    <img src="images/photo2-s4.png" alt="photo2" data-audio="audio/audio-photo2.mp3"  draggable="true">
+                    <img src="images/photo2-s4.png" alt="photo2" data-audio="audio/audio-photo2.mp3" data-song-name="Officially Missing You" draggable="true">
 
-                    <img src="images/photo3-s4.png" alt="photo3" data-audio="audio/audio-photo3.mp3"   draggable="true">
+                    <img src="images/photo3-s4.png" alt="photo3" data-audio="audio/audio-photo3.mp3" data-song-name="Shall We"  draggable="true">
 
-                    <img src="images/photo4-s4.png" alt="photo4" data-audio="audio/audio-photo4.mp3"   draggable="true">
+                    <img src="images/photo4-s4.png" alt="photo4" data-audio="audio/audio-photo4.mp3" data-song-name="Bad"  draggable="true">
 
-                    <img src="images/photo5-s4.png" alt="photo5" data-audio="audio/audio-photo5.mp3"   draggable="true">
+                    <img src="images/photo5-s4.png" alt="photo5" data-audio="audio/audio-photo5.mp3" data-song-name="Zulu Paka Tapa Hey"  draggable="true">
                     
-                    <img src="images/photo6-s4.png" alt="photo6" data-audio="audio/audio-photo6.mp3"   draggable="true">
+                    <img src="images/photo6-s4.png" alt="photo6" data-audio="audio/audio-photo6.mp3"  data-song-name="Love On Top" draggable="true">
                   </div>
 
                   <div class="drop-zone">
                     <!-- BG -->
-                    <img src="images/moments-dropzone-s4.png">
+                    <img src="images/moments-dropzone-s4.png" draggable="false" >
 
                     <!-- POP UP Zone -->
                     <div class="pop">
                       
                     </div>
 
+                    <div class="song-names">
+                      <h2><span id="currentSongName"></span></h2>
+                      <!-- NOTE to chnage the names put names of songs
+                      in the alt tags of all the songs in the images
+                    and style the h2 tag in css -->
+                    </div>
+
+
                     <div class="audio-player">
                       <audio id="audioPlayer" class="audio-element">
                           <source src="" type="audio/mp3">
                           Your browser does not support the audio element.
                       </audio>
+
                       <div class="controls">
 
                         <button id="rewindBtn" class="rewind">
