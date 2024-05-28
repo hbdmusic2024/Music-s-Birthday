@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d0e8431583.js" crossorigin="anonymous"></script>
-
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link href="css/main2.css" rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <title>Music's Birthday</title>
@@ -23,7 +23,9 @@
             <!--A Journal-->
             <section id="section1">
                 <h2 class="hidden">A Journal</h2>
-                <div class="journal-logo"><img src="images/a-journal-s1.svg" alt="A Journal section 1"></div>
+                <div class="journal-logo">
+                  <object data="images/a-journal-s1.svg" type="image/svg+xml"></object>
+                </div>
                 <div class="pen"><img src="images/pen-s1.svg" alt="pen"></div>
                 <div class="sticker-bear"><img src="images/sticker-bear-s1.svg" alt="bear"></div>
                 <div class="purple-line"><img src="images/line-purple-s1.svg" alt="purple-line"></div>
@@ -32,7 +34,9 @@
                 </div>
                 <div class="tape"><img src="images/tape-s1.svg" alt="tape"></div>
                 <div class="text-s1"><p>Keep Scrolling Down</p></div>
-                <div class="journal-text-s1"><img src="images/journal-text-s1.svg" alt="end"></div>
+                <div class="journal-text-s1">
+                  <object data="images/journal-text-s1.svg" type="image/svg+xml"></object>
+                </div>
             </section>
 
             <!--About-->
@@ -71,24 +75,90 @@
                       </div>
                     </div>
                   </div>
-                  <div class="video-slider">
-                    <video id="slider" autoplay loop>
-                      <source id="video-source" src="videos/greeting-bernardo.mp4" type="video/mp4">
-                    </video>
-            
-                    <ul class="navigation">
-                      <li onclick="videoUrl('videos/greeting-bernardo.mp4')"></li>
-                      <li onclick="videoUrl('videos/greeting-bokFam.mp4')"></li>
-                      <li onclick="videoUrl('videos/greeting-dina.mp4')"></li>
-                      <li onclick="videoUrl('videos/greeting-harnoor.mp4')"></li>
-                      <li onclick="videoUrl('videos/greeting-jean.mp4')"></li>
-                      <li onclick="videoUrl('videos/greeting-jenifer.mp4')"></li>
-                      <li onclick="videoUrl('videos/greeting-leyton.mp4')"></li>
-                      <li onclick="videoUrl('videos/greeting-thaiFriends01.mp4')"></li>
-                      <li onclick="videoUrl('videos/greeting-thaiFriends02.mp4')"></li>
-                      <li onclick="videoUrl('videos/video-end-music.mp4')"></li>
-                    </ul>
+                  
+                  <!--Video-->
+                  <div>
+
+                    <div class="swiper-btns">
+                      <div class="swiper-button-prev"><img src="images/previous-button-s3.svg" alt="previous-button"></div>
+                      <div class="swiper-button-play" id="playButton"><img src="images/play-button-s3.svg" alt="play-button"></div>
+                      <div class="swiper-button-next"><img src="images/next-button-s3.svg" alt="next-button"></div>
+                    </div>
+
+                    <div class="swiper">
+
+                      <div class="swiper-wrapper">
+                        <!-- Slides -->
+
+                        <div class="swiper-slide">
+                          <h3><span>Friend1</span></h3>
+                          <div class="slider-video video1">
+                               <video src="videos/greeting-bernardo.mp4" type="video/mp4"></video>
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                          <h3><span>Friend1</span></h3>
+                          <div class="slider-video">
+                               <video src="videos/greeting-bokFam.mp4" type="video/mp4"></video>
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                          <h3><span>Friend1</span></h3>
+                          <div class="slider-video">
+                               <video src="videos/greeting-dina.mp4" type="video/mp4"></video>
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                          <h3><span>Friend1</span></h3>
+                          <div class="slider-video">
+                               <video src="videos/greeting-harnoor.mp4" type="video/mp4"></video>
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                          <h3><span>Friend1</span></h3>
+                          <div class="slider-video">
+                               <video src="videos/greeting-jean.mp4" type="video/mp4"></video>
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                          <h3><span>Friend1</span></h3>
+                          <div class="slider-video">
+                               <video src="videos/greeting-jenifer.mp4" type="video/mp4"></video>
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                          <h3><span>Friend1</span></h3>
+                          <div class="slider-video">
+                               <video src="videos/greeting-leyton.mp4" type="video/mp4"></video>
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                          <h3><span>Friend1</span></h3>
+                          <div class="slider-video">
+                               <video src="videos/greeting-thaiFriends01.mp4" type="video/mp4"></video>
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                          <h3><span>Friend1</span></h3>
+                          <div class="slider-video">
+                               <video src="videos/greeting-thaiFriends02.mp4" type="video/mp4"></video>
+                          </div>
+                        </div>
+
+
+                      </div>
+                    </div>
+
                   </div>
+
 
                  
 
@@ -97,7 +167,9 @@
 
 
                   <div class="music-photo"><img src="images/greetings-music-s3.svg" alt="Music image"></div>
-                  <div class="greetings-text-s3"><img src="images/greetings-text-s3.svg" alt="Music image"></div>
+                  <div class="greetings-text-s3"> 
+                    <object data="images/greetings-text-s3.svg" type="image/svg+xml"></object>
+                  </div>
                   <div class="sticker-package"><img src="images/greetings-package-stickers-s3.svg" alt="Sticker package"></div>
             </section>
 
@@ -197,7 +269,9 @@
                 </div>
                 <div class="memories-ticket-wf"><img src="images/memories-ticket-wf-s5.svg"></div>
 
-                <div class="memories-text-s5"><img src="images/memories-text-s5.svg" alt="text end"></div>
+                <div class="memories-text-s5">
+                  <object data="images/memories-text-s5.svg" type="image/svg+xml"></object>
+                </div>
 
                 <div class="memories-hbd-s5"><img src="images/cinemagraph.gif" alt="text end"></div>
 
@@ -218,7 +292,59 @@
        
         <script src="js/main.js"></script> 
         <script src="js/player.js"></script> 
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+const swiper = new Swiper('.swiper', {
+    loop: false,
+    slidesPerView: 'auto',
+    spaceBetween: 33,
+    centeredSlides: true,
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    on: {
+      init: function () {
+        const firstVideo = document.querySelector('.swiper-slide:first-of-type video');
+        firstVideo.play();
+        const videos = document.querySelectorAll('video');
+        const activeIndex = this.realIndex;
+        const activeSlide = document.getElementsByClassName('swiper-slide')[activeIndex];
+        const activeVideo = activeSlide.getElementsByTagName('video')[0];
+        activeVideo.muted = false;
+        Array.prototype.forEach.call(videos, function(video){
+          video.pause();
+          video.currentTime = 0;
+        })
+
+        activeVideo.play();
+      },
+      slideChange: function () {
+        const videos = document.querySelectorAll('video');
+        const activeIndex = this.realIndex;
+        const activeSlide = document.getElementsByClassName('swiper-slide')[activeIndex];
+        const activeVideo = activeSlide.getElementsByTagName('video')[0];
+        activeVideo.muted = false;
+        Array.prototype.forEach.call(videos, function(video){
+          video.pause();
+          video.currentTime = 0;
+        })
+
+        activeVideo.play();
+      },
+    },
+
+  });
+
+
+</script>
+        
        
 
     </body>
 </html>
+
+

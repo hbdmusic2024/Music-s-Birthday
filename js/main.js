@@ -3,9 +3,9 @@ document.querySelector('.heart').addEventListener('click', function() {
 });
 
 //Video-slider
-function videoUrl(greetings){
-    document.getElementById("slider").src = greetings;
-}
+// function videoUrl(greetings){
+//     document.getElementById("slider").src = greetings;
+// }
 
 // Audio Player
 
@@ -53,3 +53,33 @@ function videoUrl(greetings){
 //     sourceElement.src = url;
 //     videoElement.load();
 // }
+
+
+function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Function to handle video play
+  function handleVideoPlay() {
+    var videoElement = document.querySelector('.video1 video');
+    if (isElementInViewport(videoElement)) {
+      videoElement.play();
+    } else {
+      videoElement.pause();
+    }
+  }
+
+  // Event listener for scroll event
+  window.addEventListener('scroll', function() {
+    handleVideoPlay();
+  });
+
+  // Initial check when the page loads
+  handleVideoPlay();
+  

@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Poppins-ExtraBold';
+    src: url(../fonts/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url(../fonts/Poppins-SemiBold.ttf);
+}
 /*Whole website*/
 html, body {
     margin: 0;
@@ -98,7 +107,7 @@ section {
     z-index: 1;
 }
 
-.journal-text-s1 img {
+.journal-text-s1 object {
     width: 650px;
 }
 
@@ -233,7 +242,7 @@ section {
     position: relative;
     margin-left: -80px;
     z-index: 1;
-    margin-top: 450px;
+    margin-top: 10px;
 }
 
 .greetings-text-s3 img {
@@ -247,6 +256,40 @@ section {
     margin-top: -170px;
     margin-right: -20px;
 }
+
+/*Slide-videos*/
+.slider-video video {
+    width: 90%;
+    padding: 10px;
+    box-shadow: 1px -1px 20px #7c3dc080;
+}
+
+.swiper-slide {
+    transition: width 700ms ease;
+}
+
+.swiper-slide {
+    width: 100%;
+}
+
+[class*="swiper-button-"]{
+    color: transparent;
+    position: absolute;
+    top: 77%;
+    margin-left: 95px;
+    margin-right: 80px;
+}
+
+
+ .swiper-button-play {
+    position: absolute;
+    left: 90px;
+    top: 74%;
+ }
+
+ .swiper-button-play img {
+    width: 60px;
+ }
 
 
 
@@ -504,7 +547,7 @@ section {
     z-index: 1;
 }
 
-.memories-text-s5 img {
+.memories-text-s5 object {
     width: 520px;
 }
 
@@ -532,57 +575,10 @@ section {
 
 
 
-/*Slide-videos*/
 
-.video-slider {
-    position: relative;
-    width: 100%;
-}
 
-.video-slider video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 430px;
-    object-fit: cover;
-}
 
-.video-slider .navigation {
-    position: absolute;
-    top: 30px;
-    left: 45%;
-    transform: translateX(-50%);
-    z-index: 100;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-}
 
-.video-slider .navigation li {
-    list-style-type: none;
-    cursor: pointer;
-    margin: 0 10px;
-    border-radius: 4px;
-    background: #fff;
-    padding: 3px 3px 0;
-    opacity: 0.7;
-    transition: 0.5s;
-}
-
-.video-slider .navigation li:hover {
-    opacity: 1;
-}
-
-.video-slider .navigation li img {
-    width: 120px;
-    transition: 0.5s;
-}
-
-.video-slider .navigation li img:hover {
-    width: 200px;
-}
 
 
 
