@@ -61,7 +61,7 @@ section {
 .sticker-bear {
     float: left;
     margin-top: -70px;
-    margin-left: -20px;
+    /* margin-left: -20px; */
     animation: sticker-bear 3s ease-in-out infinite;
 }
 
