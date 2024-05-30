@@ -2,6 +2,39 @@ document.querySelector('.heart').addEventListener('click', function() {
     document.querySelector('.envelope-wrapper').classList.toggle('flap');
 });
 
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const image = document.getElementById('imageToMove');
+
+//     image.addEventListener('click', function() {
+//         image.classList.toggle('moved');
+//     });
+// });
+
+
+
+
+// (function() {
+//     "use strict";    
+//     console.log("fired");
+
+//     let paper1 = document.querySelector(".paper-1");
+
+//     if (paper1) {
+//         function paperAnimation() {
+//             paper1.classList.toggle("animation");
+//         }
+
+//         paper1.addEventListener("click", paperAnimation, false);    
+//     } else {
+//         console.error("Element with class 'paper-1' not found.");
+//     }
+// })();
+
+
+
+
 //Video-slider
 // function videoUrl(greetings){
 //     document.getElementById("slider").src = greetings;
